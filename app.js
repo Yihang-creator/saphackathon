@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+var cors = require("cors");
+app.use(cors());
 app.listen(PORT, (error) => {
     if (!error) 
         console.log('Server is successfully running, and App is listening on Port ' + PORT);
