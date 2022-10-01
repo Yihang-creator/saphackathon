@@ -12,7 +12,9 @@
     "cors": "^2.8.5"
   },
   "scripts": {
+    "frontend": "cd frontend && npm start",
+    "backend": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "concurrently \"npm run backend\" \"npm run frontend\""
   }
 }
